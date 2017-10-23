@@ -1,0 +1,180 @@
+// 定义配置
+@color: #5b4282;
+@navBgColor: #f9f9f9;
+@borderColor: #ccc;
+
+.wcenter(@w: auto, @mt: 0, @mb: 0) {
+	width: @w;
+	margin: @mt auto @mb;
+}
+.hlh(@h) {
+	height: @h;
+	line-height: @h;
+}
+
+body {
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+
+// 定义header模块
+.header {
+	margin-bottom: 0;
+	a {
+		color: @color;
+		cursor: pointer;
+	}
+	li a:hover,
+	li a.choose {
+		background-color: @navBgColor;
+	}
+}
+.home {
+	.banner {
+		background: @color;
+		padding-top: 100px;
+		padding-bottom: 120px;
+		color: #fff;
+		text-align: center;
+		.big-logo {
+			.wcenter(120px);
+			.hlh(120px);
+			font-size: 100px;
+			border: 1px solid #fff;
+			border-radius: 10px;
+		}
+		h1 {
+			.wcenter(1000px, 50px, 30px);
+			font-size: 32px;
+			line-height: 50px;
+			font-weight: normal;
+		}
+		.btn {
+			color: #fff;
+			border-radius: 10px;
+			border: 1px solid #fff;
+			&:hover {
+				background: #fff;
+				color: @color;
+			}
+		}
+		p {
+			font-size: 12px;
+			line-height: 60px;
+			color: lighten(@color, 30%);
+		}
+	}
+	.first-list {
+		padding-top: 150px;
+		text-align: center;
+		border-bottom: 1px solid @borderColor;
+		h2 {
+			font-size: 40px;
+		}
+		.info {
+			font-size: 22px;
+			.wcenter(900px);
+		}
+		.line {
+			.wcenter(100px, 30px, 30px);
+			border-top: 1px solid @borderColor;
+		}
+		ul {
+			li {
+				width: 33.33333333%;
+				float: left;
+				list-style: none;
+			}
+			img {
+				width: 90%;
+			}
+			h3 {
+				font-size: 36px;
+			}
+			p {
+				font-size: 16px;
+				.wcenter(90%);
+			}
+		}
+		.description {
+			font-size: 22px;
+		}
+		.btn {
+			border: 1px solid @color;
+			color: @color;
+			margin: 30px auto 100px;
+			&:hover {
+				color: #fff;
+				background: @color;
+			}
+		}
+	}
+	// 定义第二个模块的样式
+	.second-list {
+		.home .first-list;
+		ul {
+			li {
+				width: 25%;
+			}
+			img {
+				width: 99%;
+			}
+		}
+	}
+}
+
+.section {
+	.banner {
+		background: @color;
+		color: #fff;
+		.container {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		h2 {
+			font-size: 60px;
+		}
+		p {
+			font-size: 28px;
+			color: fade(#fff, 80%);
+			width: 800px;
+		}
+	}
+	li {
+		list-style: none;
+	}
+	.article {
+		float: left;
+		width: 800px;
+		h3 {
+			margin-bottom: 35px;
+			padding-top: 50px;
+			border-bottom: 1px solid @borderColor;
+			padding-bottom: 6px;
+			font-size: 40px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+	.aside {
+		margin-left: 850px;
+		padding-top: 50px;
+		line-height: 30px;
+		li {
+			padding-left: 20px;
+			line-height: 30px;
+			border-left: 1px solid transparent;
+			a {
+				color: #666;
+			}
+			&:hover {
+				border-left: 1px solid @color;
+				a {
+					color: @color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
