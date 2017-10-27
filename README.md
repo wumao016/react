@@ -11,3 +11,5 @@
 ##### js是脚本文件，包含库文件以及组件文件
 ##### index.html 项目入口文件
 ##### fis-conf.js  工程化配置文件
+![image](https://github.com/wumao016/react/raw/master/img/jiazai.png)
+![image](https://github.com/wumao016/react/raw/master/img/search.png)
